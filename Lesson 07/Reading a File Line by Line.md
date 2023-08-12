@@ -1,4 +1,4 @@
-<strong>Reading a file line by line in BASH</strong>
+# Reading a file line by line in BASH
 
 With BASH you can read a file line by line, that is why you can use it to automate some mundane tasks. For instance, say you were told to set up a thousand new employee accounts. Doing this one by one would take hours and perhaps days.
 

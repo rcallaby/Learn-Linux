@@ -1,4 +1,4 @@
-<strong>Using Cron and Anacron to automate tasks</strong>
+# Using Cron and Anacron to automate tasks
 
 Creating bash scripts and other bits of software is very useful in automating the mundane tasks that you may have to perform on a repeated basis. The idea of scripts or other bits of software is to cut down on a lot of the repitive tasks, doing this saves you and your employer time to do other more important tasks.
 

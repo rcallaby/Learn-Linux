@@ -1,4 +1,4 @@
-<strong>Putting it all together</strong>
+# Putting it all together
 
 Everything learned in this course so far has lead to this moment. Essentially, all of the commands, tools and so on can be automated or streamlined by creating BASH scripts.
 
