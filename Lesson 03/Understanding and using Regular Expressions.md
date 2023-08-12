@@ -1,0 +1,5 @@
+<strong>Understanding and using Regular Expressions</strong>
+
+Regular expressions is probably one of the most useful things you can learn when learning Linux or computers in general. There are so many times when understanding Regular Expressions (RegEX) is handy. There are many programming languages that use it as part of its syntax. The number of times that I have used RegEx in every day life as a employee of a company is countless.
+
+Understanding RegEx and using RegEx can be difficult. It is not easy by any means. Some still find it difficult after many years of using it. However, just because it is daunting doesn't make it any less useful. There are many online aids that can help you construct useful RegEx expressions. So, don't be intimidated by RegEx, rather just embrace it. The plus side of getting particularly good at RegEx is that you may be one of the most valuable members of your team at wherever you work.
