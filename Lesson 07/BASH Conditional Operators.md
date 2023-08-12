@@ -1,4 +1,4 @@
-#Bash Conditional Operators
+# Bash Conditional Operators
 
 	Below is a listing of the conditional operators in BASH 
 		-eq = returns true if two numbers are equilivent
