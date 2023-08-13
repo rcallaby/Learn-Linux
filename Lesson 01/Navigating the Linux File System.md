@@ -1,4 +1,4 @@
-<strong>Navigating in Linux</strong>
+# Navigating in Linux
 
 You can navigate in the Linux file system by using a variety of commands, some of which we covered in the quick start lecture of this course.
 

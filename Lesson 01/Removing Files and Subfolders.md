@@ -1,4 +1,4 @@
-<strong>Removing Files and Directories in Linux</strong>
+# Removing Files and Directories in Linux
 
 Obviously if you created a file or a directory you would like to also know how to remove a file or directory.
 It just goes hand in hand.

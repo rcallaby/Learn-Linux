@@ -1,4 +1,4 @@
-<strong>Creating Files and Directories in Linux</strong>
+# Creating Files and Directories in Linux
 
 To create a file you can use the command touch such as the following:
 ```

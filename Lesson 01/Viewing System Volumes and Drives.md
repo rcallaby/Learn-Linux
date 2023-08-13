@@ -1,4 +1,4 @@
-<strong>Viewing System Volumes and Drives</strong>
+# Viewing System Volumes and Drives
 
 When using Linux is helpful at times to view what drives or partitions you have on your system. There are mulitple ways to accomplish this, and I will show you some of these commands in this tutorial. These commands may or may not be in the video portion of the course, so that is why it is also very helpful to refer to written documentation as well as video documentation while taking a course.
 
