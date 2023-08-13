@@ -1,4 +1,4 @@
-#Using GREP – Some Useful Examples
+# Using GREP – Some Useful Examples
 
 There are many great applications of the program GREP. GREP is a command that relies primarily on regular expressions to gain the most power from its use.
 
