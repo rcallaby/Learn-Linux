@@ -1,4 +1,4 @@
-<strong>Changing Ownership of Files and Folders</strong>
+# Changing Ownership of Files and Folders
 
 A file or folder has many attributes. Not only does the file or folder have a set of permissions it also has an assigned ownership. This ownership can be assigned to an individual person or a group. Having this level of granuality helps to make Linux very secure against hackers as well as those who may want to explore files they shouldn't in your network.
 

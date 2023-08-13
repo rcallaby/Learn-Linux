@@ -1,4 +1,4 @@
-<strong>Determining Disk Usage for Files and Folders</strong>
+# Determining Disk Usage for Files and Folders
 
 There may be instances where knowing the size of various folders and files comes in handy. If you have been using a computer for a number of years I don't need to explain to you the reasons why this is helpful. As well, many times these commmands are used as a question for a technical interview and honestly you should definitely know these commands by heart if you ever plan on getting hired in a real world job.
 

@@ -1,4 +1,4 @@
-<strong>Safely Shutdown Linux</strong>
+# Safely Shutdown Linux
 
 Linux just like any other operating system has various methods to safely shutdown or reboot the system. Knowing how to do this from the command line is helpful for a variety of reasons. For instance, when backing up your system you may want to shutdown for the rest of the day if the backup was successful. If the backup failed you may want to just reboot the system.
 

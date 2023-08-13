@@ -1,4 +1,4 @@
-<strong>Moving and renaming files and folders in Linux</strong>
+# Moving and renaming files and folders in Linux
 
 To move and rename files you can use the same command.
 
