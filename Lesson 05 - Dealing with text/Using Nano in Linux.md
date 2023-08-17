@@ -1,2 +1,2 @@
-<strong>Using Nano in Linux</strong>
+# Using Nano in Linux
 
