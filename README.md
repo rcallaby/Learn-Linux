@@ -43,3 +43,12 @@ Linux's open-source ethos encourages contributions from individuals worldwide. B
 In a world increasingly dependent on technology, learning Linux is a decision that offers numerous benefits. From its open-source nature to its versatility, security, and career opportunities, Linux stands as a foundational skill with far-reaching applications. Whether you're aiming to master system administration, enhance your programming skills, or simply broaden your technical knowledge, embracing Linux is a step toward empowerment in the digital realm. As you embark on this journey, remember that the Linux community's collaborative spirit is ready to support and guide you along the way.
 
 ### Table of Contents
+
+- [Lesson 00 - An Introduction](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson%2000%20-%20An%20Introduction)
+- Lesson 01 - Getting Started
+- Lesson 02 - Essential Skills
+- Lesson 03 - Linux Power Tools
+- Lesson 04 - Linux Processes and Jobs
+- Lesson 05 - Dealing with text
+- Lesson 06 - Backing up your system
+- Lesson 07 - Putting it together
