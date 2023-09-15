@@ -44,11 +44,11 @@ In a world increasingly dependent on technology, learning Linux is a decision th
 
 ### Table of Contents
 
-- [Lesson 00 - An Introduction](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson%2000%20-%20An%20Introduction)
-- Lesson 01 - Getting Started
-- Lesson 02 - Essential Skills
-- Lesson 03 - Linux Power Tools
-- Lesson 04 - Linux Processes and Jobs
-- Lesson 05 - Dealing with text
-- Lesson 06 - Backing up your system
-- Lesson 07 - Putting it together
+- [Lesson 00 - An Introduction](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-00%20-An%20Introduction)
+- [Lesson 01 - Getting Started](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-01-Getting%20Started)
+- [Lesson 02 - Essential Skills](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-02-Essential-Skills)
+- [Lesson 03 - Linux Power Tools](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-03-Linux-Power-Tools)
+- [Lesson 04 - Linux Processes and Jobs](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-04-Linux-Processes-and-Jobs)
+- [Lesson 05 - Dealing with text](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-05-Dealing-with-text)
+- [Lesson 06 - Backing up your system](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-06-Backing-up-your-system)
+- [Lesson 07 - Putting it together](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-07-Putting-it-together)
