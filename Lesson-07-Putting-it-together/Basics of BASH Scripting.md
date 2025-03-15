@@ -144,10 +144,8 @@ echo "Second argument: $2"
 ```
 Running the script with arguments:
 
-```
+```bash
 ./script.sh arg1 arg2
-
-
 ```
 Conclusion
 
