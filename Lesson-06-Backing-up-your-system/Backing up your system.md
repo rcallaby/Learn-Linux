@@ -29,12 +29,12 @@ rsync -avzh /home/ /media/external_drive/home_backup/
 Rclone is a command-line tool for Linux that can be used to synchronize data between different cloud storage services and local file systems. It supports a wide range of cloud storage services, including Google Drive, Dropbox, Amazon S3, and Microsoft OneDrive. Rclone can be used to backup data to a remote location or cloud storage service.
 To use Rclone, use the following command:
 
-```
+```bash
 rclone sync /path/to/source remote:backup_folder
 ```
 For example, to backup the home directory to Google Drive, use the following command:
 
-```
+```bash
 rclone sync /home/ remote:google_drive_backup/home/
 ```
 # Conclusion
