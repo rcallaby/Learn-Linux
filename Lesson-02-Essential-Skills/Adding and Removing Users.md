@@ -1,61 +1,162 @@
-<strong>Adding and Deleting Users to Linux</strong>
+# Adding and Deleting Users to Linux
 
-It would make sense that if you were learning how to use Linux you would want to know how to add users to your operating system.
-Most people share a computer, whether you have a family, business, or whatever sharing a computer usually involves multiple user accounts.
+## Key Files to Know
 
-As Linux was based upon Unix adding users is fairly painless.
+Before working with users, understand where Linux stores this data:
 
-There are both graphical user interface ways to add users as well as the most preferred way which is through the command line.
-The reason why you want to learn how to master the command line on Linux is not only does it give you more power but it is also more likely that you will be a job candidate if you know how to properly use and operate Linux from the command line. That is why I show you both ways but I am going to be honest I think the command line is the best way to go.
+* `/etc/passwd` — user account details (UID, home, shell, etc.)
+* `/etc/shadow` — hashed passwords and password aging info
+* `/etc/group` — primary and secondary groups
+* `/etc/gshadow` — group password and administration info
 
-<b>Adding users</b>
+Backup these files with `cp` before mass changes:
 
-To add a user to Linux you would need to type the following:
-```
-    sudo useradd Bob -m 
-```
-
-This would create a new user Bob with a home directory
-
-Now you would want to specify a default shell
-So if you wanted to define a default shell you would instead type the following
-```
-    sudo useradd Bob -m -s /bin/bash
-```
-So we created a new user but it doesn’t have a default group, we should really do that at the first step
-So you would add the following to the line
-```
-    sudo useradd Bob -m -s /bin/bash -g users
+```bash
+sudo cp /etc/passwd /etc/passwd.bak
+sudo cp /etc/shadow /etc/shadow.bak
+sudo cp /etc/group /etc/group.bak
+sudo cp /etc/gshadow /etc/gshadow.bak
 ```
 
-This will create the user Bob and create the home directory as well as define the default shell and assign the new user to the users group
+---
 
-Alternatively you can specify any additional groups to the command by typing a capital G following the lower case g such as the following
-```
-    sudo useradd Bob -m -s /bin/bash -g users -G sudo
-```
+## Adding a User
 
-So, after we created the user you will then need to set a password for the user
+### The Basic Command
 
-To set a different password for another user you would type the following:
-```
-    sudo passwd Bob
+```bash
+sudo useradd username
 ```
 
-And then you would follow the prompts to set a new password
+This creates a user **without setting a password** — they will not be able to log in until you set one.
 
-<b>Deleting users</b>
+---
 
-To delete a user you must have sudo access so don’t try to do this if you don’t you would just get an error message.
-By default you should create a user without sudo privileges that you will use on a day to day basis. You don’t want to continuously use Linux as admin as that is a security risk
+### Recommended Full Command
 
-To delete a user you would simply just type the following:
-```
-    sudo deluser <username>
+```bash
+sudo useradd -m -c "Full Name" -s /bin/bash username
 ```
 
-Now this will delete the user but keep their home directory and all of the files
-If you want to remove everything you should type the following:
+**Options**:
+
+* `-m` — Create the home directory `/home/username`
+* `-c` — Comment (Full Name or Description)
+* `-s` — Login shell (default is often `/bin/bash`)
+
+---
+
+### Setting the User Password
+
+After creating the user, immediately set their password:
+
+```bash
+sudo passwd username
 ```
-    sudo deluser -r <username>
+
+The system will prompt for the new password twice. The hash is stored in `/etc/shadow`.
+
+---
+
+### Setting UID or GID Manually (Advanced)
+
+In some environments (NFS shares, LDAP), you might want to manually specify UID or GID:
+
+```bash
+sudo useradd -u 1500 -g 1000 -m -s /bin/bash username
 ```
+
+* `-u` — set user ID (UID)
+* `-g` — set primary group ID (GID)
+
+---
+
+## Viewing User Details
+
+You can view the user in `/etc/passwd`:
+
+```bash
+grep username /etc/passwd
+```
+
+Example output:
+
+```text
+username:x:1500:1000:Full Name:/home/username:/bin/bash
+```
+
+Fields:
+
+1. username
+2. x (password field placeholder, actual hash is in `/etc/shadow`)
+3. UID
+4. GID (primary group)
+5. Full name/comment
+6. Home directory
+7. Shell
+
+---
+
+## Deleting a User
+
+### Command: `userdel`
+
+To delete a user **without deleting their home directory**:
+
+```bash
+sudo userdel username
+```
+
+---
+
+### Delete User and Home Directory
+
+To remove the user *and* their home directory `/home/username`:
+
+```bash
+sudo userdel -r username
+```
+
+**Caution**: This also removes user-owned files in `/home/username` — back up important data first.
+
+---
+
+## Verifying User Deletion
+
+After deleting a user, check `/etc/passwd` to ensure the account is gone:
+
+```bash
+grep username /etc/passwd
+```
+
+If there is no output, the user is removed.
+
+Also check the home directory:
+
+```bash
+ls -l /home/username
+```
+
+If using `-r`, this directory should be gone.
+
+---
+
+## Best Practices for Adding and Deleting Users
+
+* Always set a password immediately after creating the user.
+* Use `-m` to ensure a proper home directory is created.
+* Do not delete a user until confirming no important files remain.
+* Use backups before mass deletion.
+* Use `usermod -L username` to lock accounts if you need to suspend instead of delete.
+* For auditing, always log user addition and deletion in `/var/log/secure` (RHEL) or `/var/log/auth.log` (Ubuntu/Debian).
+
+---
+
+## References
+
+* `man useradd`
+* `man userdel`
+* `man passwd`
+* Red Hat Enterprise Linux 9 docs: [https://access.redhat.com/documentation/en-us/red\_hat\_enterprise\_linux/9/](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/)
+* Ubuntu Server Guide: [https://ubuntu.com/server/docs](https://ubuntu.com/server/docs)
+* The Linux System Administrator’s Guide — The Linux Documentation Project: [https://tldp.org/LDP/sag/html/](https://tldp.org/LDP/sag/html/)
