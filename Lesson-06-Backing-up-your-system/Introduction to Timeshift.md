@@ -230,17 +230,6 @@ sudo timeshift --list
 
 ---
 
-## 📚 Trusted References
-
-* Official GitHub: [https://github.com/teejee2008/timeshift](https://github.com/teejee2008/timeshift)
-* Arch Wiki: [https://wiki.archlinux.org/title/Timeshift](https://wiki.archlinux.org/title/Timeshift)
-* RPM Fusion: [https://rpmfusion.org/](https://rpmfusion.org/)
-* Debian Wiki: [https://wiki.debian.org/](https://wiki.debian.org/)
-* Flathub: [https://flathub.org/apps/com.github.timeshift](https://flathub.org/apps/com.github.timeshift)
-* Ubuntu Packages: [https://packages.ubuntu.com/search?keywords=timeshift](https://packages.ubuntu.com/search?keywords=timeshift)
-
-
-
 ### Step 2: Configure Timeshift
 
 Once Timeshift is installed, you’ll need to configure it to define backup schedules, select snapshot types, and manage included or excluded files. Timeshift can be configured using either the **Graphical User Interface (GUI)** or the **Command Line Interface (CLI)**. This guide covers both approaches in detail.
