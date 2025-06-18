@@ -242,59 +242,149 @@ sudo timeshift --list
 
 
 ### Step 2: Configure Timeshift
-Once Timeshift is installed, you need to configure it to set up backup schedules and select which directories and files to backup. The configuration is done through the Timeshift GUI or the Timeshift command-line interface (CLI).
 
-Timeshift GUI
-To access the Timeshift GUI, open your system's application launcher and search for Timeshift. Alternatively, you can launch it from the command line using the following command:
+Once Timeshift is installed, you’ll need to configure it to define backup schedules, select snapshot types, and manage included or excluded files. Timeshift can be configured using either the **Graphical User Interface (GUI)** or the **Command Line Interface (CLI)**. This guide covers both approaches in detail.
 
-```
-sudo timeshift-gtk
-```
-Once the Timeshift GUI is open, you will see the main window with four tabs: Snapshot, Rsync, Settings, and Help.
+---
 
-#### Snapshot Tab
-On the Snapshot tab, you can create, browse, and delete snapshots of your system. To create a new snapshot, click the "Create" button and select the type of snapshot you want to create (system or home directory). You can also set the snapshot location, schedule, and exclude specific directories or files.
+### **Accessing Timeshift**
 
-#### Rsync Tab
-On the Rsync tab, you can create and manage backups using the rsync backup method. This method allows you to back up your files and directories to a remote location, such as an external hard drive or a remote server. You can set up a schedule and exclude specific directories or files.
+#### **Graphical Interface (GUI)**
 
-#### Settings Tab
-On the Settings tab, you can configure advanced settings for Timeshift, such as the number of snapshots to keep, the snapshot location, and the backup method. You can also enable notifications and set up email alerts.
+To launch the Timeshift GUI:
 
-#### Help Tab
-On the Help tab, you can access the Timeshift documentation, submit bug reports, and get help from the Timeshift community.
+* **Via Application Menu**: Open your system’s application launcher and search for **Timeshift**.
+* **Via Terminal**:
 
-#### Timeshift CLI
-If you prefer to use the command line, you can configure Timeshift using the Timeshift CLI. To access the CLI, open a terminal and type the following command:
+  ```bash
+  sudo timeshift-gtk
+  ```
 
-```
+> Running Timeshift with `sudo` is required to access system-level files.
+
+---
+
+### **Timeshift GUI Overview**
+
+Once the GUI is launched, you'll see a setup wizard the first time you open it. This guides you through selecting the snapshot type, destination, schedule, and filters.
+
+After setup, the main interface has **four primary tabs**:
+
+#### **1. Snapshot Tab**
+
+This is the default tab and displays a list of existing snapshots.
+
+* **Create Snapshot**:
+  Click **Create** to manually generate a new snapshot. Timeshift supports two snapshot types:
+
+  * **System** (default): Backs up system files and settings (e.g., `/etc`, `/usr`, `/var`, but excludes `/home`).
+  * **System + Home**: Includes user files in `/home`, useful for full system recovery.
+
+* **Browse/Restore/Delete**:
+  Use the **Browse** button to explore files in a snapshot (mounted read-only). **Restore** reverts your system to the selected state. **Delete** removes old or unnecessary snapshots.
+
+#### **2. Rsync Tab**
+
+Only visible if you selected **Rsync** as the snapshot method during setup.
+
+* Allows configuration of:
+
+  * **Backup device** and location
+  * **Include/Exclude rules** for directories
+  * **Snapshot schedule** (hourly, daily, weekly, etc.)
+
+> Timeshift does **not** back up non-system partitions (e.g., `/mnt`, `/media`) by default. Use the filters to adjust this.
+
+#### **3. Settings Tab**
+
+This is where you fine-tune Timeshift’s behavior.
+
+* **Schedule**:
+  Enable and configure automatic snapshot frequencies. You can enable:
+
+  * Hourly (max: 6)
+  * Daily (max: 5)
+  * Weekly (max: 3)
+  * Monthly (max: 2)
+  * Boot (max: 3)
+
+* **Snapshot Levels**:
+  Limit how many snapshots of each type Timeshift retains. Oldest ones are deleted automatically when limits are reached.
+
+* **Users**:
+  By default, Timeshift excludes user home directories. Enable inclusion explicitly here if needed.
+
+* **Filters**:
+  Add patterns to **include or exclude specific files/directories** from snapshots. Use this to exclude large media folders, caches, or temporary directories.
+
+* **Location**:
+  Set the destination for storing snapshots. This should ideally be a separate partition or an external drive (formatted with a Linux-compatible filesystem like ext4).
+
+#### **4. Help Tab**
+
+Provides links to:
+
+* Official Timeshift documentation
+* Community support forums
+* Bug report submissions
+
+---
+
+### **Timeshift CLI (Command-Line Interface)**
+
+For advanced users or remote systems, Timeshift can be used via CLI.
+
+#### **Launch CLI Interface**:
+
+```bash
 sudo timeshift
 ```
 
-To create a new snapshot and set a custom name:
-```
-sudo timeshift --create --comment "My Custom Snapshot"
-```
+#### **Common CLI Commands**
 
-To list all snapshots:
-```
-sudo timeshift --list
-```
+* **Create a Snapshot with a Custom Comment**:
 
-To delete a snapshot:
+  ```bash
+  sudo timeshift --create --comments "My Custom Snapshot"
+  ```
 
-```
-sudo timeshift --delete [snapshot name or ID]
-```
-To restore your system from a snapshot:
-```
-sudo timeshift --restore [snapshot name or ID]
-```
-To create a snapshot using the Rsync backup method:
+* **List Existing Snapshots**:
 
-```
-sudo timeshift --create --backup-device /dev/sdb1 --backup-path /media/external_drive --rsync
-```
+  ```bash
+  sudo timeshift --list
+  ```
+
+* **Delete a Specific Snapshot**:
+
+  ```bash
+  sudo timeshift --delete --snapshot '2024-06-18_10-00-00'
+  ```
+
+* **Restore from a Snapshot**:
+
+  ```bash
+  sudo timeshift --restore
+  ```
+
+  > The CLI will walk you through the restoration steps interactively. Ensure all work is saved before proceeding.
+
+* **Create a Snapshot Using an External Device**:
+
+  ```bash
+  sudo timeshift --create --rsync --backup-device /dev/sdb1 --backup-path /media/external_drive
+  ```
+
+  > Make sure the external drive is mounted and writable.
+
+---
+
+### **Best Practices and Notes**
+
+* **Use a Dedicated Partition or Drive**: Avoid saving snapshots on the same partition as your root filesystem to prevent filling up disk space during failure recovery.
+* **Regularly Check Your Snapshot Schedule**: Timeshift doesn’t automatically notify you of backup failures unless integrated with cron or email alerts.
+* **Automate Snapshot Pruning**: Set retention policies under the "Settings" tab to avoid manual cleanup.
+* **Timeshift Is Not a File-by-File Backup Tool**: It's for system recovery. For user file backup, use tools like `rsync`, `Deja Dup`, or `BorgBackup`.
+
 ### Step 3: Create a Backup
 Now that Timeshift is configured, you can create your first backup
 
