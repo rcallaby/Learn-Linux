@@ -1,6 +1,6 @@
 # Learn-Linux
 
-In today's digital age, where technology drives every aspect of our lives, having a strong foundation in various operating systems is a valuable skill. Among these, Linux stands out as a powerful and versatile option. Whether you're an aspiring IT professional, a developer, or simply a curious individual, learning Linux can open up a world of opportunities. In this article, we will delve into the numerous reasons why learning Linux is a wise choice.
+In today's digital age, where technology drives every aspect of our lives, having a strong foundation in various operating systems is a valuable skill. Among these, Linux stands out as a powerful and versatile option. Whether you're an aspiring IT professional, a developer, or simply a curious individual, learning Linux can open up a world of opportunities. 
 
 ### Open-Source and Cost-Effective
 
@@ -24,11 +24,11 @@ While graphical user interfaces (GUIs) are prevalent in modern computing, a soli
 
 ### Career Opportunities
 
-Proficiency in Linux is a highly sought-after skill in the job market. Many IT positions, such as system administrators, network engineers, DevOps professionals, and software developers, require knowledge of Linux. Moreover, the growing popularity of cloud computing platforms like Amazon Web Services (AWS) and Google Cloud Platform (GCP) necessitates familiarity with Linux, as most cloud infrastructure relies on it.
+Proficiency in Linux is a highly sought-after skill in the job market. Many IT positions, such as system administrators, network engineers, DevOps professionals, and software developers, require knowledge of Linux. Moreover, the growing popularity of cloud computing platforms like Amazon Web Services (AWS) and Google Cloud Platform (GCP) necessitates familiarity with Linux, as most cloud infrastructure relies on it. Not only that upcoming A.I. systems are built on the foundation of Linux, therefore, it is imperative that you learn and understand Linux.
 
 ### Community Support and Learning Resources
 
-The Linux community is vibrant and supportive. Online forums, communities, and documentation provide a wealth of information for learners of all levels. Troubleshooting and learning from experienced users in these forums can accelerate the learning process and help individuals overcome challenges more effectively.
+The Linux community is very supportive as long as you also take the time to learn the fundamentals. Online forums, communities, and documentation provide a wealth of information for learners of all levels. Troubleshooting and learning from experienced users in these forums can accelerate the learning process and help individuals overcome challenges more effectively.
 
 ### Contribution to Open Source
 
@@ -36,7 +36,7 @@ Linux's open-source ethos encourages contributions from individuals worldwide. B
 
 # Conclusion
 
-In a world increasingly dependent on technology, learning Linux is a decision that offers numerous benefits. From its open-source nature to its versatility, security, and career opportunities, Linux stands as a foundational skill with far-reaching applications. Whether you're aiming to master system administration, enhance your programming skills, or simply broaden your technical knowledge, embracing Linux is a step toward empowerment in the digital realm. As you embark on this journey, remember that the Linux community's collaborative spirit is ready to support and guide you along the way.
+Learning Linux is a decision that offers numerous benefits. From its open-source nature to its versatility, security, and career opportunities, Linux stands as a foundational skill with far-reaching applications. Whether you're aiming to master system administration, enhance your programming skills, or simply broaden your technical knowledge, embracing Linux is a step toward empowerment in the digital realm. As well, many of the most modern A.I. systems are built upon Linux as the primary foundation as it provides for a highly scalable and adaptable system. As you embark on this journey, remember that the Linux community's collaborative spirit is ready to support and guide you along the way.
 
 ### Table of Contents
 
@@ -48,3 +48,7 @@ In a world increasingly dependent on technology, learning Linux is a decision th
 - [Lesson 05 - Dealing with text](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-05-Dealing-with-text)
 - [Lesson 06 - Backing up your system](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-06-Backing-up-your-system)
 - [Lesson 07 - Putting it together](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-07-Putting-it-together)
+
+#####
+
+You can view a video tutorial of this course for free online on my youtube channel. You can see the tutorial here: [Learn Linux](https://youtu.be/aBnG8pnvuFw)
