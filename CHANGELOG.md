@@ -1,4 +1,4 @@
-# Changelog
+# Change Log
 
 All notable changes to the Learn-Linux repository will be documented in this file.
 
