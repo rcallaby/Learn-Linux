@@ -48,6 +48,7 @@ Learning Linux is a decision that offers numerous benefits. From its open-source
 - [Lesson 05 - Dealing with text](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-05-Dealing-with-text)
 - [Lesson 06 - Backing up your system](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-06-Backing-up-your-system)
 - [Lesson 07 - Putting it together](https://github.com/rcallaby/Learn-Linux/tree/main/Lesson-07-Putting-it-together)
+- [Lesson 08 - Contributing to Linux Kernel](https://github.com/rcallaby/Learn-Linux/blob/main/Lesson-08-Contributing-Linux-Kernel/ContributeToLinuxKernel.md)
 
 #####
 
